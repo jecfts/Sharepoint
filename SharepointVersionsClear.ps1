@@ -5,11 +5,11 @@
 # ============================================================================================= #
 
 # Configurações
-$SiteUrl   = "https://sascartecnologia.sharepoint.com/sites/BORDEROS"
-$Tenant    = "sascartecnologia.onmicrosoft.com"
-$ClientId  = "4b6028cc-ad3b-4884-8d1c-2b6210dadddf"
+$SiteUrl   = "https://SHAREPOINTURL.sharepoint.com/sites/SITE"
+$Tenant    = "TENANT.onmicrosoft.com"
+$ClientId  = "YOUR APP REGISTRATION ID"
 $KeepCount = 20   # Quantidade de versões a manter
-$LogFile   = "C:\Temp\SharePoint_Limpeza_Real.log"
+$LogFile   = "C:\Temp\SharePoint_Limpeza.log"
 
 # Conectar
 Connect-PnPOnline -Url $SiteUrl -Tenant $Tenant -ClientId $ClientId -Interactive
@@ -53,5 +53,6 @@ foreach ($list in $lists) {
         }
     }
 }
+
 
 Write-Log ">> Processo de limpeza concluído."
